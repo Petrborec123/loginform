@@ -1,46 +1,69 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Můj profil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace</title>
 </head>
+<body style="font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4;">
 
-<body style="background-color: #fbe399">
-<h1 style="text-align: center; color: blue;">Můj profil</h1>
+<div style="background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px;">
+    <h1 style="text-align: center;">Registrace</h1>
+
+    <form action="#" method="get">
+
+        <!-- Jméno -->
+        <label for="name" style="display: block;">Celé jméno</label>
+        <input type="text" id="name" name="name" required maxlength="50" placeholder="Vaše celé jméno" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <!-- Email -->
+        <label for="email" style="display: block;">Email</label>
+        <input type="email" id="email" name="email" required placeholder="email@example.com" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <!-- Oblíbený den -->
+        <label for="favorite-day" style="display: block;">Oblíbený den</label>
+        <select id="favorite-day" name="favorite-day" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+            <optgroup label="Všední dny">
+                <option value="Pondělí">Pondělí</option>
+                <option value="Úterý">Úterý</option>
+                <option value="Středa">Středa</option>
+                <option value="Čtvrtek">Čtvrtek</option>
+                <option value="Pátek">Pátek</option>
+            </optgroup>
+            <optgroup label="Víkend">
+                <option value="Sobota">Sobota</option>
+                <option value="Neděle">Neděle</option>
+            </optgroup>
+        </select>
+
+        <label for="password" style="display: block;">Heslo</label>
+        <input type="password" id="password" name="password" required minlength="8" placeholder="Minimálně 8 znaků" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <label for="password2" style="display: block;">Zopakujte svoje heslo</label>
+        <input type="password" id="password2" name="password2" required minlength="8" placeholder="Minimálně 8 znaků" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
 
 
-<nav style="display: flex; background-color: #bdbdbd; justify-content: space-between;">
-    <h2 style="color: blue;">Muj profil</h2>
-    <ul style="list-style-type: none;display: flex; flex-direction: row;">
-        <li style="margin: 10px"><a href="#-_-">Domů</a></li>
-        <li style="margin: 10px"><a href="#o_0">O mně</a></li>
-        <li style="margin: 10px"><a href="#⌐■-■">Kontakt</a></li>
-
-    </ul>
-
-</nav>
-
-<section>
-
-    <img src="png.gif" alt="Profilový obrázek" title="ještě chvilku"
-         style="display: block; margin: 0 auto; width: 30%; height: auto; border-radius: 15px; border: 3px solid #fbb400;" />
+        <label for="favcolor">vyber svoji oblíbenou barvu</label><hr>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
 
 
-    <!-- Toggler s popisem -->
-    <details>
-        <summary style="cursor: pointer; font-weight: bold;text-align: center">Více informací</summary>
-        <p style="font-family: monospace;">01101110 01101001 01100011 00100000 01110100 01110101 00100000 01111010 01100001 01101010 01101001 01101101 01100001 01110110 01100101 01101000 01101111 00100000 01110100 01100001 01100100 01111001 00100000 01101110 01100101 01101110 01100001 01101010 01100100 01100101 01110100 01100101</p>
-    </details>
+        <div style="margin-bottom: 15px;">
+            <label for="terms" style="display: inline-flex; align-items: center;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <span style="margin-left: 5px;">Souhlasím s podmínkami</span>
+            </label>
+        </div>
 
-    <h2 style="text-align: center;">Moje zájmy</h2>
-    <ul style="list-style-type: none; padding: 0; text-align: center;">
-        <li style="font-weight: bold; text-decoration: underline; background-color: #fbb400; padding: 5px;">Spánek</li>
-        <li style="font-weight: bold; text-decoration: underline; background-color: #98ded0; padding: 5px;">Jídlo</li>
-        <li style="font-weight: bold; text-decoration: underline; background-color: #989898; padding: 5px;">Programování</li>
-    </ul>
-</section>
+
+        <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Sign Up</button>
+
+        <div style="display: flex;align-items: center; flex-direction: row; gap: 5px;">
+            <p>Already have an account?</p>
+            <a style="text-decoration: none; color:blue" href="" onclick="alert('You cant login')">Login</a>
+        </div>
+        <a href="http://" </a>
+    </form>
+</div>
+
 </body>
 </html>
